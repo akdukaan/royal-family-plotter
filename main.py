@@ -25,13 +25,14 @@ for key in keys:
         arrows.append([person['x'], person['y'], person['children'][i]['x']-person['x'], person['children'][i]['y']-person['y']])
 
 fig = plt.figure(figsize=(8, 8))
-ax = fig.add_subplot(projection='3d')
+#ax = fig.add_subplot(projection='3d')
+#fig.scatter(x, y, z, s=2, color="red")
 
-ax.scatter(x, y, z, s=2, color="red")
-plt.xlabel("DFS Topological Sort")
-plt.ylabel("Kahn's Algorithm Topological Sort")
-ax.set_zlabel("Inverse DFS Topological Sort")
-plt.title("Royal Family Tree", fontsize=15)
+plt.scatter(x, y, s=2, c=z)
+plt.xlabel("DFS Topological Sort", size=20)
+plt.ylabel("Kahn's Algorithm Topological Sort", size=20)
+#ax.set_zlabel("Inverse DFS Topological Sort")
+plt.title("Royal Family Tree", fontsize=20)
 #for i, label in enumerate(names):
 #    plt.annotate(label, (x[i], y[i]), fontsize=5)
 #for row in arrows:
